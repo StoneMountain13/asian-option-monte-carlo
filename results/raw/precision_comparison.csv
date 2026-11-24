@@ -1,0 +1,2 @@
+method,n,baseline_method,baseline_n,independent_seeds,median_standard_error_c,median_standard_error_b,standard_error_ratio_c_over_b,precision_target_met,median_wall_seconds_c,median_wall_seconds_b,nominal_time_ratio_b_over_c,matched_precision_time_ratio,paired_seed_precision_fraction
+C,10000,B,1000000,10,0.0020973068724670914,0.007839836258734263,0.26751921892890407,True,0.008450579288667845,0.544227720471099,64.35907579118057,64.35907579118057,1.0

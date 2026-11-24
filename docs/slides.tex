@@ -1,0 +1,59 @@
+% 16:9 展示稿保留参考模板的左侧导航与淡紫色顶栏。
+\documentclass[aspectratio=169,professionalfonts]{beamer}
+\geometry{paperwidth=320mm,paperheight=180mm}
+\usepackage{lmodern,amsmath,amssymb,booktabs,tabularx,graphicx}
+\usepackage{xeCJK}
+\setCJKmainfont{Noto Sans CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\useoutertheme[width=40mm,height=22mm]{sidebar}
+\useinnertheme{rectangles}
+\definecolor{navy}{RGB}{62,64,146}
+\definecolor{lavender}{RGB}{213,213,239}
+\definecolor{navmuted}{RGB}{96,97,126}
+\setbeamercolor{normal text}{fg=black,bg=white}
+\setbeamercolor{structure}{fg=navy}
+\setbeamercolor{frametitle}{fg=black,bg=lavender}
+\setbeamercolor{title}{fg=navy,bg=lavender}
+\setbeamercolor{sidebar}{fg=navy,bg=lavender}
+\setbeamercolor{palette sidebar primary}{fg=navy}
+\setbeamercolor{palette sidebar secondary}{fg=navy}
+\setbeamercolor{palette sidebar tertiary}{fg=navy}
+\setbeamercolor{title in sidebar}{fg=navy}
+\setbeamercolor{author in sidebar}{fg=navy}
+\setbeamercolor{section in sidebar}{fg=navy}
+\setbeamercolor{section in sidebar shaded}{fg=navmuted}
+\setbeamercolor{logo}{fg=navy,bg=lavender}
+\setbeamersize{text margin left=12mm,text margin right=12mm}
+\setbeamerfont{normal text}{size=\fontsize{18}{23}}
+\setbeamerfont{frametitle}{size=\fontsize{31}{37},series=\bfseries}
+\setbeamerfont{title}{size=\fontsize{33}{40},series=\bfseries}
+\setbeamerfont{author}{size=\fontsize{19}{24}}
+\setbeamerfont{institute}{size=\fontsize{17}{21}}
+\setbeamerfont{date}{size=\fontsize{17}{21}}
+\setbeamerfont{title in sidebar}{size=\fontsize{13}{17},series=\bfseries}
+\setbeamerfont{author in sidebar}{size=\fontsize{12}{16}}
+\setbeamerfont{section in sidebar}{size=\fontsize{13}{18}}
+\setbeamerfont{subsection in sidebar}{size=\fontsize{12}{16}}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{\hfill\fontsize{12}{15}\selectfont\insertframenumber/\inserttotalframenumber\hspace{7mm}\vspace{3mm}}
+\setbeamertemplate{title page}{
+ \vfill
+ \begin{beamercolorbox}[wd=\textwidth,sep=10mm,center]{title}
+  {\usebeamerfont{title}\inserttitle\par}
+ \end{beamercolorbox}
+ \vspace{8mm}
+ \centering{\usebeamerfont{author}\insertauthor\par}
+ \vfill
+}
+\logo{}
+\title[亚式期权定价]{基于控制变量的\\亚式期权高效蒙特卡洛定价}
+\author[2026001426]{学号 2026001426}
+\institute{}
+\date{}
+\graphicspath{{../results/figures/slides_zh/}}
+\input{values.tex}
+\input{parallel-values.tex}
+\begin{document}
+\fontsize{18}{23}\selectfont
+\input{slides-body.tex}
+\end{document}

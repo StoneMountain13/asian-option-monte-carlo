@@ -1,0 +1,132 @@
+{
+  "state": "completed",
+  "stage_requested": "all",
+  "config": {
+    "title": "Efficient Monte Carlo Pricing of Asian Options with Control Variates",
+    "student_id": "2026001426",
+    "model": {
+      "s0": 100.0,
+      "strike": 100.0,
+      "rate": 0.03,
+      "sigma": 0.2,
+      "maturity": 1.0,
+      "steps": 52
+    },
+    "experiment": {
+      "path_counts": [
+        10000,
+        100000,
+        1000000
+      ],
+      "seeds": [
+        2026,
+        2027,
+        2028,
+        2029,
+        2030,
+        2031,
+        2032,
+        2033,
+        2034,
+        2035
+      ],
+      "repeats": 3,
+      "methods": [
+        "A",
+        "B",
+        "C"
+      ],
+      "block_size": 20000,
+      "pilot_n": 5000,
+      "min_seconds": 0.2
+    },
+    "sensitivity": {
+      "strikes": [
+        80.0,
+        100.0,
+        120.0
+      ],
+      "sigmas": [
+        0.1,
+        0.2,
+        0.4
+      ],
+      "steps": [
+        12,
+        52,
+        252
+      ],
+      "pilot_sizes": [
+        1000,
+        5000,
+        10000
+      ],
+      "n": 100000,
+      "seeds": [
+        2026,
+        2027,
+        2028,
+        2029,
+        2030
+      ]
+    },
+    "resources": {
+      "max_cores": 6,
+      "benchmark_threads": 1,
+      "benchmark_cpu": 0
+    }
+  },
+  "software": {
+    "numpy": "1.26.4",
+    "scipy": "1.15.3",
+    "pandas": "1.5.3",
+    "matplotlib": "3.10.6",
+    "threadpoolctl": "3.5.0"
+  },
+  "python": "3.10.19",
+  "platform": "Linux-6.17.0-29-generic-x86_64-with-glibc2.39",
+  "hardware": {
+    "cpu_model": "Intel(R) Core(TM) Ultra 9 285K",
+    "worker_cpu": 0,
+    "numerical_threads": 1,
+    "max_authorized_cores": 6,
+    "parent_cpu_affinity": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "timing": {
+    "wall_seconds": "Mean per-estimate pricing time, including the independent CV pilot and all main paths; excludes subprocess startup, warmup, I/O and summary calculations.",
+    "internal_repeats": "Same seed repeated until at least min_seconds cumulative pricing time; this improves timing only and does not increase N.",
+    "process_seconds": "Fresh worker lifetime including startup, warmup and internal timing repetitions.",
+    "memory": "Fresh-process ru_maxrss converted to MiB; includes interpreter and warmup, not a baseline-subtracted allocation."
+  },
+  "statistics": {
+    "independent_units": "One estimate per unique seed; timing repeat is not a new independent sample.",
+    "variance_reduction_vs_b": "Median B sample variance / method sample variance, paired by identical model,N,seed,repeat; one repeat per seed for statistical ratios.",
+    "time_se2_ratio_vs_b": "Median method(time*SE^2) / B(time*SE^2), paired by model,N,seed,repeat; lower is better.",
+    "price_ci_figure": "Representative seed 2026, first timing repeat; its individual 95% CI is not attached to the mean of ten seeds."
+  },
+  "new_worker_calls": 570,
+  "skipped_matching_requests": 45,
+  "progress": {
+    "completed": 570,
+    "total": 570,
+    "main_completed": 270,
+    "main_total": 270,
+    "sensitivity_completed": 345,
+    "sensitivity_total": 345
+  },
+  "current": null,
+  "full_execution": {
+    "state": "complete",
+    "stage": "all",
+    "started_at": "2026-11-03T12:10:20.812758+00:00",
+    "finished_at": "2026-11-03T12:13:50.484729+00:00",
+    "wall_seconds": 209.67197055509314
+  }
+}

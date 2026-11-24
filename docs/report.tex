@@ -1,0 +1,39 @@
+% 标准黑白论文版式；报告专用数值与图表不影响展示稿。
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=24mm]{geometry}
+\usepackage{lmodern,amsmath,amssymb,booktabs,tabularx,array,graphicx,microtype}
+\usepackage{xeCJK}
+\setCJKmainfont{Noto Serif CJK SC}
+\renewcommand{\abstractname}{摘要}
+\renewcommand{\figurename}{图}
+\renewcommand{\tablename}{表}
+\renewcommand{\refname}{参考文献}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{placeins}
+\usepackage[hidelinks]{hyperref}
+\pagestyle{plain}
+\raggedbottom
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.12}
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{5}
+\renewcommand{\topfraction}{.9}
+\renewcommand{\bottomfraction}{.8}
+\renewcommand{\textfraction}{.08}
+\renewcommand{\floatpagefraction}{.8}
+\graphicspath{{../results/figures/paper/}}
+\input{paper-values.tex}
+\input{parallel-values.tex}
+\title{\Large\bfseries 基于控制变量的亚式期权高效蒙特卡洛定价}
+\author{\normalsize 学号：2026001426}
+\date{}
+\begin{document}
+\maketitle
+\input{report-body.tex}
+\end{document}

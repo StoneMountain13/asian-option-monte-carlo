@@ -1,0 +1,8 @@
+{
+  "title": "Efficient Monte Carlo Pricing of Asian Options with Control Variates",
+  "student_id": "2026001426",
+  "model": {"s0": 100.0, "strike": 100.0, "rate": 0.03, "sigma": 0.2, "maturity": 1.0, "steps": 52},
+  "experiment": {"path_counts": [10000, 100000, 1000000], "seeds": [2026, 2027, 2028, 2029, 2030, 2031, 2032, 2033, 2034, 2035], "repeats": 3, "methods": ["A", "B", "C"], "block_size": 20000, "pilot_n": 5000, "min_seconds": 0.2},
+  "sensitivity": {"strikes": [80.0, 100.0, 120.0], "sigmas": [0.1, 0.2, 0.4], "steps": [12, 52, 252], "pilot_sizes": [1000, 5000, 10000], "n": 100000, "seeds": [2026, 2027, 2028, 2029, 2030]},
+  "resources": {"max_cores": 6, "benchmark_threads": 1, "benchmark_cpu": 0}
+}
